@@ -11,7 +11,7 @@ class MyTheme {
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
       ),
-      cardColor: Colors.white, // Warna untuk container atau card
+      cardColor: Colors.white,
       iconTheme: const IconThemeData(color: Colors.black),
       textTheme: const TextTheme(
         bodyLarge: TextStyle(color: Colors.black),
@@ -29,7 +29,7 @@ class MyTheme {
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
       ),
-      cardColor: Colors.grey[900], // Warna untuk container atau card
+      cardColor: Colors.grey[900],
       iconTheme: const IconThemeData(color: Colors.white),
       textTheme: const TextTheme(
         bodyLarge: TextStyle(color: Colors.white),

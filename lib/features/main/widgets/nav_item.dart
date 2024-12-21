@@ -21,6 +21,10 @@ class NavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double fontSize = screenWidth * 0.03;
+    final theme = Theme.of(context);
+    final activeColor = theme.iconTheme.color;
+    final inactiveColor = theme.textTheme.bodyMedium!.color!.withOpacity(0.6);
+
     return InkWell(
       onTap: onTap,
       child: Column(
@@ -29,8 +33,7 @@ class NavItem extends StatelessWidget {
           Icon(
             icon,
             size: context.deviceWidth * 0.07,
-            weight: context.deviceHeight * 0.03,
-            color: isActive ? Colors.grey[800] : Colors.grey[400],
+            color: isActive ? activeColor : inactiveColor,
           ),
           const Gap(4),
           Text(
@@ -38,7 +41,7 @@ class NavItem extends StatelessWidget {
             style: TextStyle(
               fontSize: fontSize,
               fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
-              color: isActive ? Colors.grey[800] : Colors.grey[400],
+              color: isActive ? activeColor : inactiveColor,
             ),
           ),
         ],

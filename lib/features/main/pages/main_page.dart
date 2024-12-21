@@ -5,7 +5,6 @@ import 'package:rawg_video_games/features/favourite/pages/favourite_page.dart';
 import 'package:rawg_video_games/features/home/pages/home_page.dart';
 import 'package:rawg_video_games/features/main/controllers/selected_index_provider.dart';
 import 'package:rawg_video_games/features/main/widgets/nav_item.dart';
-import 'package:rawg_video_games/utils/app_colors.dart';
 
 class MainPage extends ConsumerWidget {
   const MainPage({super.key});
@@ -25,16 +24,18 @@ class MainPage extends ConsumerWidget {
     return Scaffold(
       body: selectedPage[selectedIndex],
       bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          color: AppColors.navBarColor,
-          border: Border(
+        decoration: BoxDecoration(
+          color: Theme.of(context)
+              .scaffoldBackgroundColor,
+          border: const Border(
             top: BorderSide(
-                color: Colors.grey, width: 0.2), // Garis atas warna abu-abu
+                color: Colors.grey, width: 0.2), 
           ),
         ),
         padding: EdgeInsets.only(
-            bottom: context.deviceWidth * 0.05,
-            top: context.deviceWidth * 0.02),
+          bottom: context.deviceWidth * 0.05,
+          top: context.deviceWidth * 0.02,
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

@@ -123,9 +123,9 @@ class _HomePageState extends ConsumerState<HomePage> {
           children: [
             CustomSearchField(
               controller: _searchController,
-              hintText: 'Search for games...',
+              hintText: 'Search',
             ),
-            Gap(context.deviceHeight * 0.01),
+            Gap(context.deviceHeight * 0.02),
             Expanded(
               child: _isSearching
                   ? searchResults!.when(

@@ -16,7 +16,7 @@ class FavouritePage extends ConsumerWidget {
     final favouriteState = ref.watch(favouriteControllerProvider);
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'Favorite Games'),
+      appBar: const CustomAppBar(title: 'Favorite Games'),
       body: favouriteState.isLoading
           ? ListView.builder(
               itemCount: 5,

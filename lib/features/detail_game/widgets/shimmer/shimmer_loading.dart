@@ -13,7 +13,6 @@ class ShimmerLoading extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Shimmer for Image
           Shimmer.fromColors(
             baseColor: Colors.grey[300]!,
             highlightColor: Colors.grey[100]!,
@@ -24,7 +23,6 @@ class ShimmerLoading extends StatelessWidget {
             ),
           ),
           const Gap(16),
-          // Shimmer for Title Section
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: Column(

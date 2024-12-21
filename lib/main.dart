@@ -22,7 +22,7 @@ class MainApp extends ConsumerWidget {
     return AdaptiveTheme(
       light: MyTheme.lightTheme,
       dark: MyTheme.darkTheme,
-      initial: AdaptiveThemeMode.system, // Default mode
+      initial: AdaptiveThemeMode.system, 
       builder: (theme, darkTheme) => MaterialApp.router(
         title: 'Rawg Video Games',
         debugShowCheckedModeBanner: false,

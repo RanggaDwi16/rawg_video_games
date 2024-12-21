@@ -71,7 +71,7 @@ class _DetailGamePageState extends ConsumerState<DetailGamePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Responsive Image
+                  
                   ClipRRect(
                     child: Image.network(
                       data!.backgroundImage ?? '',
@@ -84,7 +84,7 @@ class _DetailGamePageState extends ConsumerState<DetailGamePage> {
                   Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal:
-                          context.deviceWidth * 0.04, // Responsive padding
+                          context.deviceWidth * 0.04, 
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,10 +131,11 @@ class _DetailGamePageState extends ConsumerState<DetailGamePage> {
                             Gap(context.deviceWidth * 0.04),
                             Image.asset(
                               'assets/video-game.png',
+                              color: Theme.of(context).iconTheme.color,
                               width: context.deviceWidth * 0.045,
                               height: context.deviceWidth * 0.045,
                             ),
-                            Gap(context.deviceWidth * 0.01),
+                            Gap(context.deviceWidth * 0.02),
                             Text(
                               '${data.playtime} played',
                               style: TextStyle(
