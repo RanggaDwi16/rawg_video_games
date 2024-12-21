@@ -26,18 +26,9 @@ class GameItemWidget extends StatelessWidget {
         GestureDetector(
           onTap: onTap,
           child: Container(
-            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: theme.cardColor,
-              boxShadow: [
-                BoxShadow(
-                  color: theme.shadowColor.withOpacity(0.2),
-                  spreadRadius: 2,
-                  blurRadius: 5,
-                  offset: const Offset(0, 3),
-                ),
-              ],
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -104,7 +95,7 @@ class GameItemWidget extends StatelessWidget {
             ),
           ),
         ),
-        const Gap(8),
+        const Gap(16),
       ],
     );
   }
