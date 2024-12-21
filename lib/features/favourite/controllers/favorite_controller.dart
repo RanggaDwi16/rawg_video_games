@@ -63,6 +63,7 @@ class FavouriteController extends StateNotifier<FavouriteState> {
   Future<void> add(Favourite favourite) async {
     await addFavourite.execute(favourite);
     await fetchFavourites();
+    state = state.copyWith(favourites: [favourite, ...state.favourites]);
   }
 
   Future<void> remove(int id) async {
